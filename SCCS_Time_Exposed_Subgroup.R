@@ -84,7 +84,6 @@ sl_list_to_df <-function(sl, interval_to_graph){
 
 
 graph_df <- function(df){
-  print(df)
   plot(x = df$index, y =df$short, type ="l", col ="blue", ylim = c(0, 3),
        main= "Relative Incidence for Subgroup of Cohort Above and Below Cutoff Point",
        ylab="Relative Incidence", xlab="Cutoff Point in Days (blue <= x < red)" )
@@ -94,10 +93,7 @@ graph_df <- function(df){
 
 c <- c(1:1000)
 
-
-
 sl <- short_long_list(comparer = compare_patient_time, sccs1, c )
-sl
 
 sl_df = sl_list_to_df(sl, "SELF_CONTROLLED_PERIOD_RISK_1TRUE")
 
